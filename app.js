@@ -38,3 +38,20 @@
 /*
 my code below
 */
+
+const keys = document.querySelectorAll(".key");
+// console.log(keys);
+const blackKeys = document.querySelectorAll(".key.black");
+const whiteKeys = document.querySelectorAll(".key.white");
+
+keys.forEach((key) => {
+  key.addEventListener("click", () => {
+    playNote(key);
+  });
+});
+
+function playNote(key) {
+  const noteAudio = document.querySelectorAll(key.dataset.note);
+
+  console.log(key);
+}
