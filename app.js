@@ -66,8 +66,13 @@ function playNote(key) {
 }
 
 document.addEventListener("keydown", (e) => {
-  let key = e;
+  let key = e.key;
+  // console.log(key);
   let whiteKeyIndex = WHITE_KEYS.indexOf(key);
+  let blackKeyIndex = BLACK_KEYS.indexOf(key);
 
-  console.log(whiteKeyIndex);
+  // console.log(whiteKeyIndex, blackKeyIndex);
+
+  if (whiteKeyIndex > -1) playNote(whiteKeys[whiteKeyIndex]);
+  if (blackKeyIndex > -1) playNote(blackKeys[blackKeyIndex]);
 });
